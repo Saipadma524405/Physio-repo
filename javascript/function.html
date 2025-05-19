@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body">
+    <h2>hello world</h2>
+    <!-- <button id="btn" onfocus="show()">click me</button> -->
+    <button id="btn" onclick="show()">click me</button>
+    <!-- <button id="btn" ondbclick="show1()">click me</button>
+    <button id="btn" onclick="show()">click me</button> -->
+    <!-- <button id="btnbb">click me</button> -->
+    <script>
+    
+
+           function show(){
+            console.log("this is click event")
+           }
+           let ele=document.getElementById('btn')
+           function showblur(){
+            console.log("this is blur event")
+           }
+           let eleblur=document.getElementById('btn')
+           ele.addEventListener("click",show)
+        eleblur.addEventListener("blur",showblur)
+
+        window.addEventListener("keypress",()=>{
+        console.log("keypressevent")
+               })
+        window.addEventListener("keydown",()=>{
+        console.log("keypressdown event")
+               })
+        window.addEventListener("keyup",()=>{
+        console.log("keypressup event")
+               })
+
+
+            //    onload
+    //    function loadAlert(){
+    //     alert("hello buddy . im load alert!")
+    //    }  
+    //    window.addEventListener("load",loadAlert())
+
+    // foreach
+    let array=[1,2,3,4,5,6,7,8,9]
+    array.forEach((element) =>  console.log(element))
+        
+
+    // filter
+let numEven= array.filter((item) => item%2==0 )
+console.log(numEven)
+
+//  map
+ let plusfive= array.map((num) => num+5)
+ console.log(plusfive)
+// reduce
+let arraysum = array.reduce((acc,curr) => {
+    return  acc+curr
+},1)
+console.log(arraysum)
+
+function employeeinfo(startnote,endnote){
+  console.log(startnote+" " +this.name +" "+this.message+" "+endnote)
+}
+
+let employee={
+    name: "sai",
+    message:"never give up"
+}
+employeeinfo.call(employee,"its fine","on your dreams no body gonna help you thats also fine okay")
+employeeinfo.apply(employee,["its fine","on your dreams no body gonna help you thats also fine okay"])
+
+
+let empobj= employeeinfo.bind(employee,"its fine","on your dreams no body gonna help you thats also fine okay")
+empobj();
+
+
+var per={
+    name:"sai",
+    age:19,
+};
+var per1=per.name;
+console.log(per1)
+
+
+
+function students(name1,age1){
+    this.name12 = name1;
+    this.age12= age1;
+}
+let rahul = new students("ravi",20);
+console.log(rahul)
+
+
+
+for( key in rahul){
+
+    console.log(key)
+}
+
+
+let arrof=[1,2,3]
+for( num of arrof){
+    console.log(arrof[num])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

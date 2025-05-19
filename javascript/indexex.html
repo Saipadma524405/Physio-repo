@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-1,.img-2{
+            /* display: none; */
+            visibility: hidden;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>hello</h2>
+    <button id="btn" onclick="show()">show me image1
+       
+    </button>
+    <img class="img-1" src="./airtel1.jpg"  width="100px" alt="airtel">
+    <button id="btn1" onclick="showdb()">show me image2
+        
+    </button>
+    <img class="img-2"  src="./images/meal-1.jpg" width="100px" alt="meal-image">
+    <script>
+         let imageEle = document.getElementsByClassName("img-1")
+         let imageEle1 = document.getElementsByClassName("img-2")
+          
+
+        function show(){
+            console.log("click event")
+            imageEle.style.visibility="visible";
+
+
+        }
+        let btnEle = document.getElementById("btn")
+        function showdb(){
+            console.log("double click event")
+            imageEle1.style.visibility="visible";
+        }
+        let btnEle1 = document.getElementById("btn1")
+       
+    const a=[
+        {student:"saipadma"},
+        {student:"Devi priya"}
+    ]
+    const b=[...a]
+    b[0]={student:"muthyalamma"};
+    b[1].location="banglore";
+    console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+        // let i=0;
+        // count=0;
+        // while(count<=100){
+        //     if(i%6 == 0){
+        //         console.log(i);
+        //         i++;
+        //     }
+        // }
+        // 6 12 18 24 30 
+    </script>
+</body>
+</html>
